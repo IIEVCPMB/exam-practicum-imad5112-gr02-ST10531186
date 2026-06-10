@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_200"
+    android:padding="20dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Heading -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Camp Check List"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp"
+            />
+
+        <!-- Checklist Output -->
+
+        <TextView
+            android:id="@+id/txtChecklist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/black"
+            android:padding="16dp"
+            android:text="List Of Items Will Appear Here"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            />
+
+        <!-- Item Spinner -->
+
+        <Spinner
+            android:id="@+id/spinnerItems"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:textSize="20sp"/>
+
+        <!-- Category -->
+
+        <EditText
+            android:id="@+id/editCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="#FFFFFF"
+            android:hint="Enter the Category"
+            android:padding="12dp"
+            android:textSize="18sp"/>
+
+        <!-- Quantity -->
+
+        <EditText
+            android:id="@+id/editQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="#FFFFFF"
+            android:padding="12dp"
+            android:hint="Enter Quantity Size"
+            android:textSize="18sp"/>
+
+        <!-- Items Button -->
+        <Button
+            android:id="@+id/btnItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="VIEW ITEMS"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+        <!-- Clear Button -->
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="CLEAR DATA"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            />
+
+        <!-- Comments Button-->
+
+        <Button
+            android:id="@+id/btnComments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="VIEW COMMENTS"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+
+        <!-- Button -->
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="BACK TO BASE"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+</ScrollView>
