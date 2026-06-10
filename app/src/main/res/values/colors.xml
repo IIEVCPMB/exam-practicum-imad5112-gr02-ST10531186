@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Red & White Theme -->
+    <color name="primary_red">#D32F2F</color>
+    <color name="dark_red">#B71C1C</color>
+    <color name="secondary_red">#EF5350</color>
+    <color name="background_white">#FFFFFF</color>
+    <color name="surface_light_grey">#F5F5F5</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#616161</color>
+    <color name="button_text_white">#FFFFFF</color>
+    <color name="card_shadow">#33000000</color>
+    <color name="red_light_bg">#FFF5F5</color>
+</resources>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface_light_grey"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="40dp"
+                android:background="@color/primary_red" />
+
+            <Space android:layout_width="12dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Packing List"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_campfire"
+                android:contentDescription="Camping" />
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.CampsiteCommander.Card"
+            android:layout_marginBottom="24dp"
+            app:cardBackgroundColor="@color/background_white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TOTAL ITEMS PACKED"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary"
+                    android:letterSpacing="0.12"
+                    android:textAllCaps="true" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp" />
+
+                <TextView
+                    android:id="@+id/txtTotalItems"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="56sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_red" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp" />
+
+                <View
+                    android:layout_width="80dp"
+                    android:layout_height="3dp"
+                    android:background="@color/secondary_red"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Items ready for adventure"
+                    android:textSize="13sp"
+                    android:textColor="@color/text_secondary"
+                    android:gravity="center" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ACTIONS"
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:letterSpacing="0.1"
+            android:textAllCaps="true"
+            android:layout_marginBottom="12dp"
+            android:layout_marginStart="4dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddGear"
+            style="@style/Widget.CampsiteCommander.Button"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="ADD GEAR ITEM"
+            android:textAllCaps="true"
+            android:textSize="16sp"
+            app:icon="@android:drawable/ic_menu_add"
+            app:iconGravity="textStart"
+            app:iconTint="@color/button_text_white"
+            android:layout_marginBottom="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnItems"
+            style="@style/Widget.CampsiteCommander.Button"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="VIEW ALL ITEMS"
+            android:textAllCaps="true"
+            android:textSize="16sp"
+            app:icon="@android:drawable/ic_menu_sort_by_size"
+            app:iconGravity="textStart"
+            app:iconTint="@color/button_text_white"
+            android:layout_marginBottom="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnClear"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="CLEAR ALL DATA"
+            android:textAllCaps="true"
+            android:textSize="16sp"
+            android:textColor="@color/primary_red"
+            app:icon="@android:drawable/ic_menu_delete"
+            app:iconGravity="textStart"
+            app:iconTint="@color/primary_red"
+            app:cornerRadius="16dp"
+            app:strokeColor="@color/primary_red"
+            app:strokeWidth="2dp" />
+
+    </LinearLayout>
+
+</ScrollView>

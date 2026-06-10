@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/detailLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface_light_grey"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="40dp"
+                android:background="@color/primary_red" />
+
+            <Space android:layout_width="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Camp Checklist"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary" />
+        </LinearLayout>
+
+        <!-- Checklist Items Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.CampsiteCommander.Card"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GEAR ITEMS"
+                    android:textSize="13sp"
+                    android:textColor="@color/text_secondary"
+                    android:letterSpacing="0.1"
+                    android:textAllCaps="true"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:id="@+id/txtDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:text="No items added yet."
+                    android:textSize="16sp"
+                    android:textColor="@color/text_primary"
+                    android:lineSpacingExtra="6dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Input Section Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.CampsiteCommander.Card"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ADD NEW ITEM"
+                    android:textSize="13sp"
+                    android:textColor="@color/text_secondary"
+                    android:letterSpacing="0.1"
+                    android:textAllCaps="true"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Item Spinner -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Gear Item"
+                    android:textSize="13sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="4dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerItems"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@drawable/bg_spinner"
+                    android:paddingHorizontal="12dp"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Category Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/categoryLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:hint="Category (e.g. Shelter, Food, Tools)"
+                    app:boxStrokeColor="@color/primary_red"
+                    app:boxStrokeWidth="2dp"
+                    android:layout_marginBottom="12dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:padding="12dp"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Quantity Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/quantityLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:hint="Quantity / Comment"
+                    app:boxStrokeColor="@color/primary_red"
+                    app:boxStrokeWidth="2dp"
+                    android:layout_marginBottom="20dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editQuantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:padding="12dp"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Add/Save Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSaveItem"
+                    style="@style/Widget.CampsiteCommander.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="SAVE ITEM"
+                    android:textAllCaps="true"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- View Items Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnItems"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="VIEW ITEMS"
+                    android:textColor="@color/primary_red"
+                    android:textAllCaps="true"
+                    app:cornerRadius="16dp"
+                    app:strokeColor="@color/primary_red"
+                    app:strokeWidth="2dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Actions Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ACTIONS"
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:letterSpacing="0.1"
+            android:textAllCaps="true"
+            android:layout_marginBottom="12dp"
+            android:layout_marginStart="4dp" />
+
+        <!-- View Comments Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnComments"
+            style="@style/Widget.CampsiteCommander.Button"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="VIEW COMMENTS"
+            android:textAllCaps="true"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Clear Data Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnClear"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="CLEAR DATA"
+            android:textAllCaps="true"
+            android:textColor="@color/primary_red"
+            app:cornerRadius="16dp"
+            app:strokeColor="@color/primary_red"
+            app:strokeWidth="2dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Back to Base Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBack"
+            style="@style/Widget.CampsiteCommander.Button"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="BACK TO BASE"
+            android:textAllCaps="true"
+            android:textSize="16sp"
+            app:icon="@android:drawable/ic_menu_revert"
+            app:iconGravity="textStart"
+            app:iconTint="@color/button_text_white" />
+    </LinearLayout>
+</ScrollView>

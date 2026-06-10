@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <!-- Campfire icon -->
+    <!-- Logs -->
+    <path
+        android:fillColor="#8D6E63"
+        android:pathData="M35,75 L45,90 L60,75 L50,60 Z" />
+    <path
+        android:fillColor="#6D4C41"
+        android:pathData="M60,75 L75,90 L85,75 L70,60 Z" />
+    <!-- Flame outer -->
+    <path
+        android:fillColor="#EF5350"
+        android:pathData="M60,30 C45,40 35,55 35,65 C35,78 46,85 60,85 C74,85 85,78 85,65 C85,55 75,40 60,30 Z" />
+    <!-- Flame inner -->
+    <path
+        android:fillColor="#FF7043"
+        android:pathData="M60,40 C50,48 43,58 43,65 C43,74 51,80 60,80 C69,80 77,74 77,65 C77,58 70,48 60,40 Z" />
+    <!-- Flame core -->
+    <path
+        android:fillColor="#FFB74D"
+        android:pathData="M60,50 C55,55 50,62 50,67 C50,73 55,77 60,77 C65,77 70,73 70,67 C70,62 65,55 60,50 Z" />
+    <!-- Sparks -->
+    <circle android:fillColor="#FFD54F" android:cx="40" android:cy="45" android:r="3" />
+    <circle android:fillColor="#FFD54F" android:cx="80" android:cy="48" android:r="2.5" />
+    <circle android:fillColor="#FFD54F" android:cx="52" android:cy="32" android:r="2" />
+    <circle android:fillColor="#FFD54F" android:cx="68" android:cy="35" android:r="2" />
+</vector>
