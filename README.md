@@ -104,6 +104,9 @@ app/
    ```bash
    ./gradlew assembleDebug
    ```
+<img width="384" height="665" alt="Screenshot 2026-03-29 153005" src="https://github.com/user-attachments/assets/14acb893-d854-420e-89b5-68dedd9df8be" />
+<img width="1843" height="902" alt="Screenshot 2026-06-10 165138" src="https://github.com/user-attachments/assets/4d194955-48e1-443f-a5d5-77c72f5337b1" />
+<img width="1873" height="1001" alt="Screenshot 2026-06-10 165208" src="https://github.com/user-attachments/assets/537cb1b1-a77e-4da3-8d1b-689f9b37f07c" />
 
 ## Development Notes
 
