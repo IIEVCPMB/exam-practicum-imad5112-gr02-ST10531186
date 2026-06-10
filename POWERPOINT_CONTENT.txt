@@ -1,0 +1,394 @@
+CAMPSITE COMMANDER — POWERPOINT CONTENT
+=========================================
+Outdoor Adventure Inventory Management App
+Kotlin + Android
+
+======================================================================
+SLIDE 1: TITLE SLIDE
+======================================================================
+
+Title: Campsite Commander
+Subtitle: Outdoor Adventure Inventory Management
+Your Name:
+Date:
+
+======================================================================
+SLIDE 2: PROJECT OVERVIEW
+======================================================================
+
+What is Campsite Commander?
+
+• Android mobile application for managing camping gear inventory
+• Helps users track what they've packed before a camping trip
+• Simple, intuitive interface with three navigation screens
+• Built with Kotlin programming language
+• Uses standard Android Views (XML layouts)
+
+Target Users:
+  - Campers and hikers
+  - Outdoor adventure enthusiasts
+  - Anyone who needs to pack for a trip
+
+======================================================================
+SLIDE 3: FEATURES
+======================================================================
+
+Key Features:
+
+1. Splash/Welcome Screen
+   - Branded entry point with campfire icon
+   - "GET STARTED" button to enter the app
+
+2. Main Dashboard
+   - Shows total number of packed items
+   - Quick-action buttons for gear management
+
+3. Gear Management (Detail View)
+   - Select from 8 predefined gear items
+   - Add categories (e.g., Shelter, Food, Tools)
+   - Add quantity/comment for each item
+   - Save, view, and clear items
+
+4. Data Operations
+   - Save individual gear items
+   - View all saved items at once
+   - View comments attached to items
+   - Clear all data with one tap
+
+======================================================================
+SLIDE 4: PRE-DEFINED GEAR ITEMS
+======================================================================
+
+The app comes with 8 pre-loaded camping items:
+
+1. Tent
+2. Marshmallows
+3. Flashlight
+4. Sleeping Bag
+5. Camp Stove
+6. First Aid Kit
+7. Water Bottle
+8. Compass
+
+Users can assign a category and quantity to each item.
+
+======================================================================
+SLIDE 5: VISUAL DESIGN — COLOR PALETTE
+======================================================================
+
+Theme: Modern Red & White Professional
+
+Primary Red:    #D32F2F  (Bold action buttons)
+Dark Red:       #B71C1C  (Accent elements)
+Secondary Red:  #EF5350  (Dividers, highlights)
+White:          #FFFFFF  (Background)
+Light Grey:     #F5F5F5  (Card surfaces)
+Dark Text:      #212121  (Primary text)
+Grey Text:      #616161  (Secondary text)
+
+Design Principles:
+  ✓ Material Design components
+  ✓ Rounded corners (12dp–16dp)
+  ✓ Subtle shadows and elevation
+  ✓ Consistent red-and-white branding
+
+======================================================================
+SLIDE 6: SCREEN WALKTHROUGH — SPLASH SCREEN
+======================================================================
+
+Splash Screen Layout:
+
+┌─────────────────────────────┐
+│  █████████████████████████  │  ← Red accent bar (top)
+│                             │
+│         🔥 (Campfire)       │  ← Vector icon (120dp)
+│                             │
+│    Campsite Commander       │  ← Title (36sp, bold, red)
+│                             │
+│ Outdoor Adventure Inventory │  ← Subtitle (16sp, grey)
+│                             │
+│                             │
+│     [ GET STARTED ]         │  ← Red button (rounded, 16dp)
+│                             │
+│  █████████████████████████  │  ← Red accent bar (bottom)
+└─────────────────────────────┘
+
+Navigation: Tap "GET STARTED" → Main Screen
+
+======================================================================
+SLIDE 7: SCREEN WALKTHROUGH — MAIN SCREEN
+======================================================================
+
+Main Screen (Packing List Dashboard):
+
+┌─────────────────────────────┐
+│ ▌ Packing List         🔥  │  ← Header with red accent strip
+│                             │
+│  ┌─────────────────────┐   │
+│  │ TOTAL ITEMS PACKED  │   │  ← Summary card
+│  │        0            │   │  ← Count in large red text
+│  │    ─────────        │   │  ← Red divider
+│  │ Items ready for     │   │
+│  │ adventure           │   │
+│  └─────────────────────┘   │
+│                             │
+│  ACTIONS                    │
+│                             │
+│  [ ADD GEAR ITEM ]         │  ← Red filled button
+│  [ VIEW ALL ITEMS ]        │  ← Red filled button
+│  [ CLEAR ALL DATA ]        │  ← Outlined red button
+└─────────────────────────────┘
+
+======================================================================
+SLIDE 8: SCREEN WALKTHROUGH — DETAIL VIEW
+======================================================================
+
+Detail View (Camp Checklist):
+
+┌─────────────────────────────┐
+│ ▌ Camp Checklist            │  ← Header
+│                             │
+│  ┌── GEAR ITEMS ─────────┐ │
+│  │ Tent                  │ │  ← Items display card
+│  │   Category: Shelter   │ │
+│  │   Quantity: 1         │ │
+│  │   ─────────────────   │ │
+│  │ No items added yet.   │ │
+│  └───────────────────────┘ │
+│                             │
+│  ┌── ADD NEW ITEM ───────┐ │
+│  │ Select Gear Item      │ │
+│  │ [ Tent ▼ ]            │ │  ← Item spinner
+│  │ Category:             │ │
+│  │ [_______________]     │ │  ← Category input
+│  │ Quantity:             │ │
+│  │ [_______________]     │ │  ← Quantity input
+│  │                       │ │
+│  │ [ SAVE ITEM ]         │ │  ← Save button
+│  │ [ VIEW ITEMS ]        │ │  ← Outlined button
+│  └───────────────────────┘ │
+│                             │
+│  ACTIONS                    │
+│  [ VIEW COMMENTS ]         │
+│  [ CLEAR DATA ]            │
+│  [ ← BACK TO BASE ]        │  ← Navigation button
+└─────────────────────────────┘
+
+======================================================================
+SLIDE 9: TECHNICAL ARCHITECTURE
+======================================================================
+
+Technology Stack:
+
++------------------+---------------------------+
+| Component        | Technology                |
++------------------+---------------------------+
+| Language         | Kotlin                    |
+| UI Framework     | Android Views (XML)       |
+| Min SDK          | API 25 (Android 7.1)      |
+| Target SDK       | API 37                    |
+| Build System     | Gradle (Kotlin DSL)       |
+| Architecture     | Single-Activity           |
+| Navigation       | Visibility-based          |
+| Data Storage     | In-memory arrays          |
+| Theme            | android:Theme.Material    |
+|                  |   .Light.NoActionBar      |
++------------------+---------------------------+
+
+Dependencies:
+  • AndroidX Core KTX
+  • AndroidX Activity Compose
+  • AndroidX Lifecycle Runtime
+
+======================================================================
+SLIDE 10: PROJECT STRUCTURE
+======================================================================
+
+app/
+└── src/main/
+    ├── java/com/example/campsitecommander/
+    │   └── MainActivity.kt        (app logic & navigation)
+    │
+    ├── res/
+    │   ├── drawable/              (custom graphics)
+    │   │   ├── ic_campfire.xml    (campfire vector icon)
+    │   │   ├── bg_red_button.xml  (red button shape)
+    │   │   ├── bg_outlined_button.xml
+    │   │   ├── bg_card_white.xml  (card with shadow)
+    │   │   ├── bg_edit_text.xml   (input field outline)
+    │   │   └── bg_spinner.xml     (dropdown outline)
+    │   │
+    │   ├── layout/                (UI screens)
+    │   │   ├── activity_main.xml  (root container)
+    │   │   ├── splash_screen.xml  (welcome screen)
+    │   │   ├── main_screen.xml    (dashboard)
+    │   │   └── detail_view.xml    (gear management)
+    │   │
+    │   └── values/                (resources)
+    │       ├── colors.xml         (color palette)
+    │       ├── strings.xml        (text strings)
+    │       └── themes.xml         (app theme)
+
+======================================================================
+SLIDE 11: KEY CODE SNIPPETS — MAINACTIVITY
+======================================================================
+
+App Entry Point (MainActivity.kt):
+
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_main)
+
+        // Screen navigation
+        btnStart.setOnClickListener {
+            splashLayout.visibility = View.GONE
+            mainLayout.visibility = View.VISIBLE
+        }
+
+        // Save gear item
+        btnSaveItem.setOnClickListener {
+            saveCurrentItem(selectedItemIndex)
+            Toast.makeText(this, "${items[idx]} saved!", ...)
+        }
+    }
+}
+
+Navigation Flow:
+  Splash Screen → Main Screen ↔ Detail View
+  (visibility toggling between layouts)
+
+======================================================================
+SLIDE 12: DATA MANAGEMENT
+======================================================================
+
+Data Storage:
+
+// 8 predefined gear items
+val items = arrayOf("Tent", "Marshmallows", "Flashlight", ...)
+
+// Parallel arrays for item data (in-memory)
+val categories = Array(items.size) { "" }
+val quantities = Array(items.size) { "" }
+val comments = Array(items.size) { "" }
+
+Operations:
+  • Save:     saveCurrentItem(index) → stores input in arrays
+  • Load:     loadCurrentItem(index) → fills inputs from arrays
+  • Display:  displayItems() → shows all items with details
+  • Comments: displayComments() → shows quantity/comments
+  • Clear:    btnClear → resets all arrays to empty strings
+
+======================================================================
+SLIDE 13: CUSTOM DRAWABLES
+======================================================================
+
+All UI styling is done with XML drawables (no external library):
+
+Red Button (bg_red_button.xml):
+  <shape>
+    <solid android:color="#D32F2F" />
+    <corners android:radius="16dp" />
+  </shape>
+
+Outlined Button (bg_outlined_button.xml):
+  <shape>
+    <solid android:color="#FFFFFF" />
+    <stroke android:width="2dp" android:color="#D32F2F" />
+    <corners android:radius="16dp" />
+  </shape>
+
+Card Background (bg_card_white.xml):
+  <layer-list>
+    <item> ← shadow layer
+    <item android:bottom="2dp"> ← white surface
+  </layer-list>
+
+Outlined Input (bg_edit_text.xml):
+  <shape>
+    <stroke android:width="2dp" android:color="#D32F2F" />
+    <corners android:radius="12dp" />
+    <padding .../>
+  </shape>
+
+======================================================================
+SLIDE 14: HOW TO BUILD & RUN
+======================================================================
+
+Prerequisites:
+  • Android Studio (latest version)
+  • JDK 11 or higher
+  • Android SDK (API 25–37)
+  • Physical device or emulator (API 25+)
+
+Steps:
+  1. Open project in Android Studio
+  2. Wait for Gradle sync to complete
+  3. Select a device/emulator
+  4. Click Run (▶) or press Shift+F10
+
+Build Command (terminal):
+  ./gradlew assembleDebug
+
+Output APK:
+  app/build/outputs/apk/debug/app-debug.apk
+
+======================================================================
+SLIDE 15: CHALLENGES & SOLUTIONS
+======================================================================
+
+Development Challenges Faced:
+
+1. White Screen on Launch
+   Problem: Theme.AppCompat theme requires appcompat library
+   Solution: Switched to platform theme
+             (android:Theme.Material.Light.NoActionBar)
+
+2. Material Components Not Loading
+   Problem: MaterialButton, MaterialCardView failed to inflate
+   Solution: Replaced with standard Button, FrameLayout +
+             custom XML drawable backgrounds
+
+3. Duplicate Button IDs
+   Problem: Same IDs across included layouts caused conflicts
+   Solution: Unique IDs per screen
+             (btnViewAllItems, btnClearAll vs btnItems, btnClear)
+
+4. XML Namespace Errors
+   Problem: android:context → not a valid Android attribute
+   Solution: Changed to tools:context with tools namespace
+
+======================================================================
+SLIDE 16: CONCLUSIONS
+======================================================================
+
+Summary:
+
+✓ Campsite Commander is a fully functional Android gear
+  management app built with Kotlin
+
+✓ Features three screens with intuitive navigation
+
+✓ Professional red-and-white Material Design theme
+
+✓ Academic assessment demonstrating:
+  • Kotlin programming
+  • Android Views & XML layouts
+  • Event-driven navigation
+  • Data management patterns
+  • UI/UX design principles
+
+✓ All styling done with custom XML drawables for
+  maximum compatibility
+
+Future Improvements:
+  • Persist data with SharedPreferences or Room database
+  • Add smooth screen transition animations
+  • Allow users to add custom gear items
+  • Implement search and filter functionality
+  • Add photo attachment for gear items
+
+======================================================================
+END OF PRESENTATION CONTENT
+======================================================================

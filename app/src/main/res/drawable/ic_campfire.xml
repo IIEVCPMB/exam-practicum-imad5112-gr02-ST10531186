@@ -24,9 +24,20 @@
     <path
         android:fillColor="#FFB74D"
         android:pathData="M60,50 C55,55 50,62 50,67 C50,73 55,77 60,77 C65,77 70,73 70,67 C70,62 65,55 60,50 Z" />
-    <!-- Sparks -->
-    <circle android:fillColor="#FFD54F" android:cx="40" android:cy="45" android:r="3" />
-    <circle android:fillColor="#FFD54F" android:cx="80" android:cy="48" android:r="2.5" />
-    <circle android:fillColor="#FFD54F" android:cx="52" android:cy="32" android:r="2" />
-    <circle android:fillColor="#FFD54F" android:cx="68" android:cy="35" android:r="2" />
+    <!-- Spark 1 (at 40,45 radius 3) -->
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M40,42 A3,3 0 1,1 40,48 A3,3 0 1,1 40,42 Z" />
+    <!-- Spark 2 (at 80,48 radius 2.5) -->
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M80,45.5 A2.5,2.5 0 1,1 80,50.5 A2.5,2.5 0 1,1 80,45.5 Z" />
+    <!-- Spark 3 (at 52,32 radius 2) -->
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M52,30 A2,2 0 1,1 52,34 A2,2 0 1,1 52,30 Z" />
+    <!-- Spark 4 (at 68,35 radius 2) -->
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M68,33 A2,2 0 1,1 68,37 A2,2 0 1,1 68,33 Z" />
 </vector>

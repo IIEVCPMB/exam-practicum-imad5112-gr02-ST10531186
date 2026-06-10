@@ -75,6 +75,8 @@ class MainActivity : ComponentActivity() {
         val btnStart = findViewById<Button>(R.id.btnStart)
         val btnAddGear = findViewById<Button>(R.id.btnAddGear)
         val btnSaveItem = findViewById<Button>(R.id.btnSaveItem)
+        val btnViewAllItems = findViewById<Button>(R.id.btnViewAllItems)
+        val btnClearAll = findViewById<Button>(R.id.btnClearAll)
         val btnItems = findViewById<Button>(R.id.btnItems)
         val btnClear = findViewById<Button>(R.id.btnClear)
         val btnComments = findViewById<Button>(R.id.btnComments)
@@ -105,6 +107,13 @@ class MainActivity : ComponentActivity() {
             updateTotalCount()
         }
 
+        // View All Items (from main screen)
+        btnViewAllItems.setOnClickListener {
+            mainLayout.visibility = View.GONE
+            detailLayout.visibility = View.VISIBLE
+            displayItems()
+        }
+
         // View Items (in detail view)
         btnItems.setOnClickListener {
             displayItems()
@@ -116,7 +125,21 @@ class MainActivity : ComponentActivity() {
             mainLayout.visibility = View.VISIBLE
         }
 
-        // Clear Data
+        // Clear All Data (from main screen)
+        btnClearAll.setOnClickListener {
+            for (i in items.indices) {
+                categories[i] = ""
+                quantities[i] = ""
+                comments[i] = ""
+            }
+            editCategory.text = ""
+            editQuantity.text = ""
+            txtDetails.text = "No items added yet."
+            updateTotalCount()
+            Toast.makeText(this, "All data cleared", Toast.LENGTH_SHORT).show()
+        }
+
+        // Clear Data (in detail view)
         btnClear.setOnClickListener {
             for (i in items.indices) {
                 categories[i] = ""
